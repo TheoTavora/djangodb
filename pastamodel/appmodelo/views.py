@@ -5,8 +5,8 @@ from django.http import JsonResponse
  
 
 def index(request):
-    lista_itens = Cliente.objects.all()
-    return render(request, 'appmodelo/index.html', {'cliente':lista_itens})
+    clientes = Cliente.objects.all()
+    return render(request, 'appmodelo/index.html', {'cliente':clientes})
 
 
   

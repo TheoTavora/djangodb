@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>BANCO DE DADOS</title>
 </head>
 <body>
-
+ 
     <h1>BANCO DE DADOS</h1>
     <form method = "post" action="{% url 'index' %}">
         {% csrf_token %}
@@ -17,13 +17,13 @@
         <input type="text" name="endereco" placeholder="Digite o endereco">
         <input type="submit" value="Enviar dados">
     </form>
-
-
-
+ 
+ 
+ 
     <ul>
-        {% for cliente in lista_itens %}
+        {% for cliente in clientes %}
             <li>
-            {{cliente.id}}:{{cliente.nome}}-{{cliente.idade}}-{{cliente.email}}-{{cliente.telefone}}-{{cliente.endereco}}
+            {{clientes.id}}:{{clientes.nome}}-{{clientes.idade}}-{{clientes.email}}-{{clientes.telefone}}-{{clientes.endereco}}
             </li>
         {%empty%}
             <li> Sem comentários na lista...</li>
